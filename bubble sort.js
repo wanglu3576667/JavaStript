@@ -18,7 +18,8 @@ while (time<sort.length){
 			sort[sub] = sort[sub+1];
 			sort[sub+1] = medium;
 			sub = sub+1;
-		}else {
+		}
+		else {
 			sub = sub+1;
 		}
 	}
