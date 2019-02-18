@@ -1,0 +1,63 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.clearfix{
+   overflow: hidden;
+}
+header>.logo{
+    float: left;
+}
+header>.search{
+    float: right;
+}
+main>#KEYS{
+    text-align: center;
+}
+main>#KEYS>div>kbd{
+    position: relative;
+    display: inline-block;
+    padding: 16px 24px;
+    margin: 0px 16px 16px 0px;
+    font-family: Frutiger,Helvetica,sans-serif;
+    font-size: 16px;
+    color: #999;
+    text-shadow: 0 1px 0 rgba(255,255,255,.75);
+    border-radius: 5px;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #eee;
+    box-shadow: inset 0 0 2em rgba(0,0,0,.05), 0 3px 0 #ddd, 0 3px 2px rgba(0,0,0,.5);
+}
+main>#KEYS>div>kbd>button{
+    position: absolute;
+    bottom:0;
+    right:2px;
+    display: none;
+    color: #999;
+    border-radius: 5px;
+    text-shadow: 0 1px 0 rgba(255,255,255,.75);
+    font-family: Frutiger,Helvetica,sans-serif;
+
+}
+main>#KEYS>div>kbd:hover>button{
+    display: inline-block;
+    
+}
+footer>.greeting{
+    font: 12px 'Microsoft YaHei',SimSun,Helvetica,Tahoma,Arial,sans-serif!important;
+    font-style: normal !important;
+    font-variant-ligatures: normal !important;
+    font-variant-caps: normal !important;
+    font-variant-numeric: normal !important;
+    font-variant-east-asian: normal !important;
+    font-weight: normal !important;
+    font-stretch: normal !important;
+    font-size: 12px !important;
+    line-height: normal !important;
+    font-family: "Microsoft YaHei", SimSun, Helvetica, Tahoma, Arial, sans-serif !important;
+    color: #999;
+    text-align: center;
+    padding: 10px 0px;
+    background-color: #DCDCDC;
+}
