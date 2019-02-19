@@ -9,8 +9,8 @@ main>#KEYS>div{text-align: center;width:800px;;}
 main>#KEYS>div>kbd{width:10px; display: inline-block;padding: 16px 24px;margin: 0px 10px 20px 0px;
 font-family: Frutiger,Helvetica,sans-serif;position: relative;font-size: 16px;color: #999; 
 text-shadow: 0 1px 0 rgba(255,255,255,.75);border-radius: 6px;border-top: 1px solid #bb2ac38f;
-border-bottom: 1px solid #251f1f;box-shadow: inset 0 0 2em rgba(165, 57, 228, 0.6), 0 3px 0 #000000a8, 0 3px 2px rgba(177, 91, 193, 0.64);
-background-color:rgba(2, 2, 2, 0.781)}
+border-bottom: 1px solid #251f1f;;
+box-shadow: inset 0 0 2em rgba(165, 57, 228, 0.6), 0 3px 0 #000000a8, 0 3px 2px rgba(177, 91, 193, 0.64)}
 main>#KEYS>div>kbd:hover{box-shadow: 0 0 0 0;}
 main>#KEYS>div>kbd>img{max-width:16px;max-height: 16px;position: absolute;bottom: 2px;left: 2px;border-radius: 50%;}
 main>#KEYS>div:nth-child(2)>kbd{margin-right: 14px;}
@@ -18,33 +18,8 @@ main>#KEYS>div>kbd>button{position: absolute;bottom:0;right:2px;display: none;co
 border-radius: 5px;font-family: Frutiger,Helvetica,sans-serif;background: #332121c9;border: 1px solid #40183dc9;outline: none;}
 main>#KEYS>div>kbd:hover>button{display: inline-block;}
 footer{height: 10%;}
-footer>.greeting{
-    height: 100%;
-    font: 12px 'Microsoft YaHei',SimSun,Helvetica,Tahoma,Arial,sans-serif!important;
-    font-style: normal !important;
-    font-variant-ligatures: normal !important;
-    font-variant-caps: normal !important;
-    font-variant-numeric: normal !important;
-    font-variant-east-asian: normal !important;
-    font-weight: normal !important;
-    font-stretch: normal !important;
-    font-size: 12px !important;
-    line-height: normal !important;
-    font-family: "Microsoft YaHei", SimSun, Helvetica, Tahoma, Arial, sans-serif !important;
-    color:black;
-    position: relative;
-    background-color: rgba(119, 114, 114, 0.514);
-}
-footer>.greeting>span{
-    display: block;
-    height: 40px;
-    width: 300px;
-    line-height: 20px;
-    text-align: center;
-    font-weight: bold;
-    position: absolute;
-    top:50%;
-    left: 50%;
-    margin-top:-20px;
-    margin-left: -150px;
-}
+footer>.greeting{height: 100%; font: 12px 'Microsoft YaHei',SimSun,Helvetica,Tahoma,Arial,sans-serif; font-size: 12px; 
+font-family: "Microsoft YaHei", SimSun, Helvetica, Tahoma, Arial, sans-serif;color:black; position: relative;
+background-color: rgba(119, 114, 114, 0.514);}
+footer>.greeting>span{display: block;height: 40px;width: 300px;line-height: 20px;text-align: center;font-weight: bold;
+position: absolute;top:50%;left: 50%;margin-top:-20px;margin-left: -150px;}
