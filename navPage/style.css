@@ -9,7 +9,7 @@ main>#KEYS>div{text-align: center;width:800px;;}
 main>#KEYS>div>kbd{width:10px; display: inline-block;padding: 16px 24px;margin: 0px 10px 20px 0px;
 font-family: Frutiger,Helvetica,sans-serif;position: relative;font-size: 16px;color: #999; 
 text-shadow: 0 1px 0 rgba(255,255,255,.75);border-radius: 6px;border-top: 1px solid #bb2ac38f;
-border-bottom: 1px solid #251f1f;;
+border-bottom: 1px solid #251f1f;background: rgba(0, 0, 0, 0.88);
 box-shadow: inset 0 0 2em rgba(165, 57, 228, 0.6), 0 3px 0 #000000a8, 0 3px 2px rgba(177, 91, 193, 0.64)}
 main>#KEYS>div>kbd:hover{box-shadow: 0 0 0 0;}
 main>#KEYS>div>kbd>img{max-width:16px;max-height: 16px;position: absolute;bottom: 2px;left: 2px;border-radius: 50%;}
