@@ -16,11 +16,20 @@ function init(){
         ['a','s','d','f','g','h','j','k','l'],
         ['z','x','c','v','b','n','m']
       ];
-    var host = {q:'www.qq.com',b:'www.baidu.com',j:'www.jianshu.com',z:'www.zhihu.com'};
+    var host = {q:'www.qq.com',b:'www.baidu.com',j:'www.jianshu.com',
+                z:'www.zhihu.com',w:'weibo.com',t:'www.taobao.com',
+                i:'www.iqiyi.com',t:'www.tianya.cn',x:'web.immomo.com',
+                h:'www.huaban.com',n:'nba.hupu.com',d:'book.douban.com',
+                p:'www.qiushibaike.com',c:'www.tuniu.com',s:'www.qulishi.com',
+                y:'www.douyu.com',a:'www.acfun.cn',e:'www.juejin.im',g:'www.tianyancha.com',
+                l:'www.lagou.com',m:'www.zbj.com',v:'suhehui.com',r:'www.youmi.net',f:'www.ctrip.com',
+                o:'mp.weixin.qq.com',k:'www.yunyingzhe.com',u:'www.edelmangroup.cn'}
+
     var hostInLocalStorage = JSON.parse(localStorage.getItem('newHost'));
     if (hostInLocalStorage){
         host=hostInLocalStorage;
     }
+
     return {
         keys:keys,
         host:host
@@ -30,6 +39,14 @@ function init(){
 function create(ele){
     var bianliang=document.createElement(ele);
     return bianliang;
+}
+//..........................
+function createImg(){
+    var img = create('img');
+    img.onerror = function (){
+        img.src = 'https://i.loli.net/2017/11/10/5a05afbc5e183.png'
+    }
+    return img;
 }
 //...................................................................
 function listenToUser(host){
@@ -52,7 +69,7 @@ function makeKbd(keys,host){
     
             var KBD = create('kbd');
             var BUTTON = create('button');
-            var IMG = create('img');
+            var IMG = createImg();
             
             KBD.textContent=keyName[index2];
             BUTTON.textContent='编辑';
@@ -62,10 +79,11 @@ function makeKbd(keys,host){
             if (host[keyName[index2]]){ 
                 IMG.src='http://'+host[keyName[index2]] + '/favicon.ico';
             }
-    
+
             KBD.appendChild(IMG);
             DIV.appendChild(KBD);
             KBD.appendChild(BUTTON);
+             
            
             BUTTON.onclick=function (even){
                 var b=prompt('写下你想存入的网址吧！')
@@ -76,8 +94,8 @@ function makeKbd(keys,host){
                 localStorage.setItem('newHost',JSON.stringify(host));
                 IMG1.onerror=function(){
                     alert('抱歉，我已经很努力了，但还是找不到这个网站的小logo！')
-                    IMG1.className='onerror';
-                }
+                   IMG1.src = 'https://i.loli.net/2017/11/10/5a05afbc5e183.png';
+                } 
             }
         }
     } 
