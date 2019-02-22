@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--获得手机端实际屏幕大小-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>破产版小画板</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="//at.alicdn.com/t/font_1054694_eztuepw0306.js"></script>
+</head>
+<body>
+    <canvas id="canvas" class="draw"></canvas>
+    <ol class="tool">
+        <li id="pen" class="pen" title="画笔">
+            <svg class="icon" aria-hidden="true">
+                <use xlink:href="#icon-pen"></use>
+            </svg>
+            <ol class="color">
+                <li class="black"></li>
+                <li class="red"></li>
+                <li class="yellow"></li>
+                <li class="blue"></li>
+            </ol>
+        </li>
+        <li id="earser" class="earser" title="橡皮">
+            <svg class="icon" aria-hidden="true">
+                <use xlink:href="#icon-Shape"></use>
+            </svg>
+            <ol class="earserSize">
+                    <li class="small">
+                        <div></div>
+                    </li>
+                    <li class="common">
+                        <div></div>
+                    </li>
+                    <li class="big">
+                        <div></div>
+                    </li>
+                    <li class="clear">
+                        <div></div>
+                    </li>
+                </ol>
+        </li>
+        <li id="line" class="line" title="线">
+            <svg class="icon" aria-hidden="true">
+                <use xlink:href="#icon-tubiao-"></use>
+            </svg>
+            <ol class="lineSize" id="line">
+                    <li class="line-1"><div></div></li>
+                    <li class="line-2"><div></div></li>
+                    <li class="line-3"><div></div></li>
+                    <li class="line-4"><div></div></li>
+            </ol>
+        </li>
+        <li id="clear" class="clear" title="清屏">
+                <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-novigo_clear"></use>
+                    </svg>
+        </li>
+        <li id="download" class="download" title="下载">
+                <svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-xiazai"></use>
+                </svg>
+        </li>
+    </ol>
+</body>
+</html>
+<script src="./main.js"></script>
