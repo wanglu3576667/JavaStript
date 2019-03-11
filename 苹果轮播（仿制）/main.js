@@ -18,5 +18,18 @@
        
         
     },3000)
-    
+    document.addEventListener('visibilitychange',function(){
+        console.log(document.hidden)
+        if (document.hidden === true){
+            clearInterval(timer)
+        }else{
+            timer = setInterval(function(){
+                if (n === $but.length-1){
+                    n=0
+                }
+        
+                $but.eq(++n).trigger('click')
+            },3000)
+        }
+    })
 }())
