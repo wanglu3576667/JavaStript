@@ -1,0 +1,67 @@
+*{margin: 0;padding: 0px;list-style: none;transition: 0.5s linear; font-family: cursive;
+box-sizing: border-box;}
+a{
+    text-decoration: none;color:red;
+}
+@keyframes breathe {
+    0%{ box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18),
+        0 5px 15px 0 rgba(0, 0, 0, 0.15);}
+    100%{box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.45),
+        0 8px 20px 0 rgba(0, 0, 0, 0.45);}   
+}
+body{height: 100vh;}
+#code{
+    position: absolute;
+    z-index: 22;
+
+}
+#code1{
+    font-size: 20px;
+    position: absolute;
+    right:0;
+    z-index: 22;
+
+}
+#main{
+    position: absolute;top:50%;
+    left:50%;transform: translateX(-50%) translateY(-50%);
+    height:620px;width:1348px;
+    overflow: hidden;
+}
+.body{
+    position:fixed;
+    right:0;
+    top:50%;
+    transform:translateY(-50%);
+    
+}
+.outer2{
+    position: absolute;
+    left:50%; 
+    top:50%;
+    transform: translate(-50%,-50%);
+    width:600px;
+    height:600px;
+}
+.outer{
+    width:450px;
+    height:165px;
+    position:absolute;
+    top:50%;
+    left:50%; 
+    transform: translate(-50%,-50%);
+}
+.token.property,.token.selector,.token.function{
+    color:black;
+}
+.token.comment{
+    color:black;
+}
+#butOuter{position: absolute;left:50%;top:580px;transform: translateX(-50%);display: flex;justify-content: space-between; width: 100px;}
+svg{fill:#f3072a;display: inline-block;}
+
+.icon {
+    width: 2em; height: 2em;
+    vertical-align: -0.15em;
+    overflow: hidden;
+ }

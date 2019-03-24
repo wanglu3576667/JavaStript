@@ -1,0 +1,120 @@
+*{padding:0;margin:0;box-sizing:border-box;}
+.body{
+    height:100vh;
+    width:100%;
+    background:#FEE433;
+}
+.outer{width:450px;
+    height:165px;
+    position:absolute;top:50%;
+    left:50%; 
+    transform: translate(-50%,-50%);
+}
+.nose{position:absolute;
+    left:50%;
+    margin-left:-10px;
+    margin-top:28px;
+    border-radius:50%;
+    border:12px solid black;
+    border-color:black transparent transparent;}
+.eyes{
+    width:50px;
+    height:50px;
+    background:#2E2E2E;
+    border:#000000 2px solid;
+    border-radius:50%;
+    position:absolute;left:50%;
+    margin-left:-25px;
+}
+.eyes.left{
+    margin-left:-140px;
+}
+.eyes.right{
+    margin-left:90px;
+}
+.eyes.left::after{
+    content:"";
+    display:inline-block;
+    width:20px;height:20px
+    ;background:white;
+    border:2px black solid;
+    border-radius:50%;
+    margin-left:6px;margin-top:0px}  
+.eyes.right::after{
+    content:"";
+    display:inline-block;
+    width:20px;
+    height:20px;
+    background:white;
+    border:2px black solid;
+    border-radius:50%;
+    margin-left:6px;
+    margin-top:0px
+}
+.face{
+    width:64px;
+    height:64px;
+    background:#FC0D1C;
+    border:2px #000 solid;
+    border-radius:50%;
+    position:absolute;}
+.face.left{
+    left:50%;
+    top:85px;
+    margin-left:-184px;}
+.face.right{
+    left:50%;
+    top:85px;
+    margin-left:116px;
+}
+.mustache{
+    width:78px;
+    height:23px;
+    position:absolute;
+    background:#FEE433;
+}
+.mustache.left{
+    left:50%;
+    top:50px;
+    margin-left:-78px;
+    transform:rotate(-20deg);
+    border-bottom:3px black solid;
+    border-left:3px black solid;
+    border-bottom-left-radius:60px 40px 
+}
+.mustache.right{
+    left:50%;
+    top:50px;
+    transform:rotate(20deg);
+    border-top:none;
+    border-right:3px black solid;
+    border-bottom:3px black solid;
+    border-bottom-right-radius:60px 40px
+}
+.mouthOuter{
+    position:absolute;
+    left:50%;
+    transform:translateX(-50%);
+    bottom:-5px;
+    z-index:-1;
+    height:111px;
+    width:100px;
+    overflow:hidden;
+}
+.mouth{
+    width:100px;
+    height:200px;
+    background:#990513;
+    border-radius:90%;
+    position:absolute;
+    bottom:0;border:black 2px solid;
+    overflow:hidden;
+}
+.tongue{
+    width:100px;
+    height:100px;
+    background:#FC4A62;
+    position:absolute;
+    bottom:-12px;
+    border-radius:50%
+}
