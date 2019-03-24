@@ -189,7 +189,7 @@ body{
 .body{
     margin-top:0;
     margin-right:0;
-    height:100vh;
+    height:100%;
     width:100%;
     background:#FEE433;
 }

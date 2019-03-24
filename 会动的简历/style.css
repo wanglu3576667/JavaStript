@@ -57,7 +57,7 @@ body{height: 100vh;}
 .token.comment{
     color:black;
 }
-#butOuter{position: absolute;left:50%;top:580px;transform: translateX(-50%);display: flex;justify-content: space-between; width: 100px;}
+#butOuter{position: absolute;left:50%;bottom:0;transform: translateX(-50%);display: flex;justify-content: space-between; width: 100px;}
 svg{fill:#f3072a;display: inline-block;}
 
 .icon {
