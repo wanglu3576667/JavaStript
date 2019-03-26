@@ -52,7 +52,7 @@
                 primeval+= content1
                 timer(writePageLetter)
             }else{
-                setTimeout(writePageSheet,time)
+                setTimeout(()=>{writePageSheet(n)},time)
             }
            
     }
@@ -63,7 +63,7 @@
          if (n === content2.length){
             timer(writePageMarkDown)
          }else{
-             setTimeout(writePageLetter,time)
+            setTimeout(()=>{writePageLetter(n)},time)
          }
     }    
     
@@ -79,9 +79,9 @@
             preTag1.innerHTML = a.replace('苹果轮播','<a href="https://wanglu3576667.github.io/My-Project/%E8%8B%B9%E6%9E%9C%E8%BD%AE%E6%92%AD%EF%BC%88%E4%BB%BF%E5%88%B6%EF%BC%89/apple.html" target="_blank">苹果轮播</a>')
             .replace('静态简历','<a href="https://wanglu3576667.github.io/my-cv/resume.html" target="_blank">静态简历</a>')
             .replace('canvas画板','<a href="https://wanglu3576667.github.io/My-Project/drawingBoard/drawingBoard.html" target="_blank">canvas画板</a>')
-             .replace('导航器','<a href="https://wanglu3576667.github.io/My-Project/navPage/navpage.html" target="_blank">导航器</a>')
+            .replace('导航器','<a href="https://wanglu3576667.github.io/My-Project/navPage/navpage.html" target="_blank">导航器</a>')
         }else{
-            setTimeout(writePageMarkDown,time)
+            setTimeout(()=>{writePageMarkDown(n)},time)
         }
     
     }
