@@ -1,19 +1,13 @@
 !function (){
 
     init()
-    writePageCss(writePageSheet,content)
+
+    timer(writePageCss)
     
-    but1.addEventListener('click',function(event){
-        time=30
-        console.log(time)
-    })
-    but2.addEventListener('click',function(event){
-        time=1;
-        console.log(time)
-    })
-
-
-
+    but1.addEventListener('click',function(){time=30})
+    but2.addEventListener('click',function(){time=1;})
+    
+    
 
     function init(){
         window.time = 30;
@@ -27,56 +21,53 @@
         preTag1.id = 'code1'
     }
 
-    function writePageCss(writePageSheet,content){
-        let n = 0;
-        setTimeout(function fun(){
+    function timer(callback){
+        var n = 0
+        setTimeout(function (){
+        callback(n)
+        },time)
+    }
+
+    function writePageCss(n){
             n++
             preTag.innerHTML = Prism.highlight(primeval+content.slice(0,n), Prism.languages.css, 'css');
             styleTag.innerHTML = primeval +content.slice(0,n)
             preTag.scrollTop = preTag.scrollHeight
             if (n === content.length){
                 primeval = content
-                writePageSheet()
+                timer(writePageSheet)
             }else{
-                setTimeout(fun,time)
+                setTimeout(()=>{writePageCss(n)},time)
+                console.log(n)
             }
-           
-        },time)
+        
     }
 
-    function writePageSheet(){
-        let n = 0;
-        setTimeout(function fun(){
-            n++
+    function writePageSheet(n){
+             n++
             preTag.innerHTML = Prism.highlight(primeval+content1.slice(0,n), Prism.languages.css, 'css');
             styleTag.innerHTML =  primeval+content1.slice(0,n)
             preTag.scrollTop = preTag.scrollHeight
             if (n === content1.length){
                 primeval+= content1
-                writePageLetter()
+                timer(writePageLetter)
             }else{
-                setTimeout(fun,time)
+                setTimeout(writePageSheet,time)
             }
            
-        }, time);
     }
 
-    function writePageLetter(){
-        let n = 0;
-        setTimeout(function fun(){
-            n++
-            code1.innerHTML = content2.slice(0,n)
-             if (n === content2.length){
-                 writePageMarkDown()
-             }else{
-                 setTimeout(fun,time)
-             }
-        },time)
+    function writePageLetter(n){
+        n++
+        code1.innerHTML = content2.slice(0,n)
+         if (n === content2.length){
+            timer(writePageMarkDown)
+         }else{
+             setTimeout(writePageLetter,time)
+         }
     }    
     
-    function writePageMarkDown(){
-        let n = 0;
-       setTimeout(function fun(){
+    function writePageMarkDown(n){
         n++
         preTag.innerHTML = Prism.highlight(primeval+content3.slice(0,n), Prism.languages.css, 'css');
         preTag.scrollTop = preTag.scrollHeight
@@ -90,10 +81,9 @@
             .replace('canvas画板','<a href="https://wanglu3576667.github.io/My-Project/drawingBoard/drawingBoard.html" target="_blank">canvas画板</a>')
              .replace('导航器','<a href="https://wanglu3576667.github.io/My-Project/navPage/navpage.html" target="_blank">导航器</a>')
         }else{
-            setTimeout(fun,time)
+            setTimeout(writePageMarkDown,time)
         }
-       },time)
+    
     }
     
-
 }.call()
