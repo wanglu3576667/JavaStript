@@ -28,11 +28,12 @@
     box-shadow: 0px -0.25vh 0.25vh 0.25vh rgba(255,255,255,0.2);display: flex;justify-content: space-between}
 
 .song_list>.swiper_window{height: 100%;width:80%;position: relative;overflow: hidden;}
-.song_list>.swiper_window>.song_menu_list{position: absolute;top:50%;transform: translateY(-50%);width: 2000px;}
-.song_list>.swiper_window>.song_menu_list>li{width: 20vh;height:20vh;float: left;margin-right: 2vh;}
+.song_list>.swiper_window>.song_menu_list{position: absolute;top:50%;transform: translateY(-50%);transition: 0.5s}
+.song_list>.swiper_window>.song_menu_list>li{width: 20vh;height:20vh;float: left;margin:0 1vh;}
+.song_list>.swiper_window>.song_menu_list>li:first-child{}
+.song_list>.swiper_window>.song_menu_list>li:hover{box-shadow: 0 0 0.25vh 0.25vh white;cursor: pointer;}
 .song_list>.swiper_window>.song_menu_list>li>p{color:rgba(255,255,255,0.6);font-size: 2vh;text-align: center;font-weight: bold;margin-top: 1vh;}
-.song_list>.swiper_window>.song_menu_list>li:first-child>div{background: url('http://cloud.hunger-valley.com/music/public_tuijian_spring.jpg-big') center center no-repeat;
-background-size: cover;width: 20vh;height:16vh;}
+.song_list>.swiper_window>.song_menu_list>li>div{background-size: cover;width: 20vh;height:16vh;}
 .song_list>.left_scroll,.right_scroll{width:8%;height:100%;position: relative;}
 .song_list .icon{position: absolute;top:50%;left: 50%;transform: translate(-50%,-50%);
 width: 5vh;height: 5vh; fill: white;transition: 0.5s}
