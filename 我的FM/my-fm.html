@@ -5,15 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="referrer" content="never">
-
+<!------------------------------------------------------------------------------------->
     <link rel="stylesheet" href="./css/init.css">
     <link rel="stylesheet" href="./css/home_page.css">
     <link rel="stylesheet" href="./css/child_page.css">
     <link rel="stylesheet" href="./css/icon.css">
-
-    <script src="//at.alicdn.com/t/font_1115265_sy1ufrdv3vd.js"></script>
+<!------------------------------------------------------------------------------------->
+    <script src="//at.alicdn.com/t/font_1115265_377za0nlt6.js"></script>
     <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
-
+<!------------------------------------------------------------------------------------->
     <title>MY-FM</title>
 </head>
 <body>
@@ -28,9 +28,9 @@
                                 <use xlink:href="#icon-like"></use>
                              </svg>
                         </span>
-                        <span class="pause_song">
+                        <span class="pause_song stop_playing">
                             <svg class="icon" aria-hidden="true">
-                                <use xlink:href="#icon-zantingtingzhi"></use>
+                                <use xlink:href="#icon-bofang"></use>
                             </svg>
                         </span>
                         <span class="next_song">
@@ -42,8 +42,8 @@
                 </div>
                 <div class="plear_right">
                     <div class="outer">
-                            <span class="label">90后</span>
-                            <p class="song_name">It's a new day</p>
+                            <span class="label">FM</span>
+                            <p class="song_name">音乐播放器</p>
                             <div class="song_data">
                                 <span class="listen">
                                     <svg class="icon" aria-hidden="true">
@@ -65,11 +65,11 @@
                                 <div class="progress_bar">
                                     <div class="progress"></div>
                                 </div>
-                                <div class="time">1:02</div>
+                                <div class="time">0:00</div>
                             </div>
                             <div class="song_info">
-                                <p class="singer">周杰伦</p>
-                                <p class="lyric">最美不是下雨天，是曾与你躲过雨的屋檐</p>
+                                <p class="singer">歌手名</p>
+                                <p class="lyric">歌词显示</p>
                             </div>
                     </div>
                     
@@ -85,9 +85,7 @@
             <div class="swiper_window">
                 <ul class="song_menu_list clearfiex">
                     <li>
-                        <div>
-                        </div>
-                        <p>漫步春天</p>
+                        
                     </li>
                 </ul>
             </div>
@@ -100,6 +98,11 @@
     </section>
     <div class="bg"></div>
     <section class="child_page"></section>
+
+    <!------------------------------------------------------------------------------------->
+
+    <script src="./JS/CustomEvent.js"></script>
+    <script src="./JS/FM.js"></script>
     <script src="./JS/footer.js"></script>
 </body>
 </html>

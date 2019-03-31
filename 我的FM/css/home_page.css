@@ -20,7 +20,7 @@
 .plear_right>.outer>.label{background-color: #2E6EEC;color:white;font-size: 2vh;padding: 0.4em 0.8em;}
 .plear_right>.outer>.progress_outer{display: flex;margin-top: 10vh;}
 .plear_right>.outer>.progress_outer>.progress_bar{width:90%;height:5px;background-color: gray;align-self: center;}
-.plear_right>.outer>.progress_outer>.progress_bar>.progress{width:20%;height:5px;background-color: white;}
+.plear_right>.outer>.progress_outer>.progress_bar>.progress{width:1%;height:5px;background-color: white;}
 .plear_right>.outer>.progress_outer>.time{color:white;flex: 1;margin-left: 1vh;}
 .plear_right>.outer>.song_info>.singer{margin-top:3vh;font-size: 3vh;color: white;}
 .plear_right>.outer>.song_info>.lyric{margin-top:2vh;font-size:2vh;color:gray;}
@@ -30,7 +30,6 @@
 .song_list>.swiper_window{height: 100%;width:80%;position: relative;overflow: hidden;}
 .song_list>.swiper_window>.song_menu_list{position: absolute;top:50%;transform: translateY(-50%);transition: 0.5s}
 .song_list>.swiper_window>.song_menu_list>li{width: 20vh;height:20vh;float: left;margin:0 1vh;}
-.song_list>.swiper_window>.song_menu_list>li:first-child{}
 .song_list>.swiper_window>.song_menu_list>li:hover{box-shadow: 0 0 0.25vh 0.25vh white;cursor: pointer;}
 .song_list>.swiper_window>.song_menu_list>li>p{color:rgba(255,255,255,0.6);font-size: 2vh;text-align: center;font-weight: bold;margin-top: 1vh;}
 .song_list>.swiper_window>.song_menu_list>li>div{background-size: cover;width: 20vh;height:16vh;}
