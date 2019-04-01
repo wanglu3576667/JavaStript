@@ -1,8 +1,8 @@
 .plear_outer{height: 76vh;padding-top:12vh; }
 .plear{height: 100%;width:80%;margin :0 auto;display: flex;}
 .plear_left{border: 1px bisque;} 
-.plear_left>.cover{height: 46vh; width: 46vh;background: url('http://cloud.hunger-valley.com/music/public_tuijian_spring.jpg-big')center center no-repeat;
- background-size: cover; box-shadow: 0px -0.25vh 0.25vh 0.25vh rgba(0, 0, 0, 0.23);}
+.plear_left>.cover{height: 46vh; width: 46vh;background: url('../image/marius-masalar-410695-unsplash.jpg')center center no-repeat;
+ background-size: cover; box-shadow: 0 0 0.25vh 0.25vh #353435c2;}
 .plear_left>.contor{display: flex;justify-content: space-around;margin-top: 4vh;}
 .plear_left>.contor>span>.icon{transition:0.5s; width: 5vh;height: 5vh;fill: white;}
 .plear_left>.contor>.collect_song:hover>svg{fill: #d21738;cursor: pointer;}
@@ -11,29 +11,31 @@
 .plear_right{flex: 1;}
 .plear_right>.outer{margin-left:9vh;}
 .plear_right>.outer>.song_name{color: white;font-size: 6vh;margin-top:2vh;font-weight: bold;}
-.plear_right>.outer>.song_data{color:white;display: flex;justify-content: space-between;width:80%;margin-top:12vh;}
+.plear_right>.outer>.song_data{color:white;display: flex;justify-content: space-between;width:80%;margin-top:10vh;}
 .plear_right>.outer>.song_data .icon{fill:white;width: 3vh;height:3vh;transition: 0.5s;}
+.plear_right>.outer>.song_data>span>span{font-size:2vh}
 .plear_right>.outer>.song_data>.listen:hover>svg{fill: #d21738;cursor: pointer;}
 .plear_right>.outer>.song_data>.love:hover>svg{fill: #d21738;cursor: pointer;}
 .plear_right>.outer>.song_data>.praise:hover>svg{fill: #d21738;cursor: pointer;}
-
 .plear_right>.outer>.label{background-color: #2E6EEC;color:white;font-size: 2vh;padding: 0.4em 0.8em;}
-.plear_right>.outer>.progress_outer{display: flex;margin-top: 10vh;}
-.plear_right>.outer>.progress_outer>.progress_bar{width:90%;height:5px;background-color: gray;align-self: center;}
-.plear_right>.outer>.progress_outer>.progress_bar>.progress{width:1%;height:5px;background-color: white;}
-.plear_right>.outer>.progress_outer>.time{color:white;flex: 1;margin-left: 1vh;}
-.plear_right>.outer>.song_info>.singer{margin-top:3vh;font-size: 3vh;color: white;}
-.plear_right>.outer>.song_info>.lyric{margin-top:2vh;font-size:2vh;color:gray;}
+.plear_right>.outer>.progress_outer{display: flex;margin-top: 8vh;}
+.plear_right>.outer>.progress_outer>.progress_bar{width:90%;height:1vh;background-color: gray;align-self: center;}
+.plear_right>.outer>.progress_outer>.progress_bar>.progress{width:1%;height:1vh;background-color: white;transition: 1s;}
+.plear_right>.outer>.progress_outer>.time{color:white;flex: 1;margin-left: 1vh;font-size: 2vh;}
+.plear_right>.outer>.song_info>.singer{margin-top:2vh;font-size: 3vh;color: white;}
+.plear_right>.outer>.song_info>.lyric{margin-top:1vh;font-size:2vh;font-weight:bold;color:#d21738;}
 .song_list{height: 24vh;background: rgba(255, 255, 255, 0.2);
-    box-shadow: 0px -0.25vh 0.25vh 0.25vh rgba(255,255,255,0.2);display: flex;justify-content: space-between}
-
+box-shadow: 0px -0.25vh 0.25vh 0.25vh rgba(255,255,255,0.2);display: flex;justify-content: space-between;opacity: 0.5;
+transition: 0.5s}
 .song_list>.swiper_window{height: 100%;width:80%;position: relative;overflow: hidden;}
+.song_list:hover{opacity: 1;transition: 0.5s}
 .song_list>.swiper_window>.song_menu_list{position: absolute;top:50%;transform: translateY(-50%);transition: 0.5s}
 .song_list>.swiper_window>.song_menu_list>li{width: 20vh;height:20vh;float: left;margin:0 1vh;}
-.song_list>.swiper_window>.song_menu_list>li:hover{box-shadow: 0 0 0.25vh 0.25vh white;cursor: pointer;}
-.song_list>.swiper_window>.song_menu_list>li>p{color:rgba(255,255,255,0.6);font-size: 2vh;text-align: center;font-weight: bold;margin-top: 1vh;}
-.song_list>.swiper_window>.song_menu_list>li>div{background-size: cover;width: 20vh;height:16vh;}
+.song_list>.swiper_window>.song_menu_list>li:hover{cursor: pointer;}
+.song_list>.swiper_window>.song_menu_list>li>p{color:rgb(63, 53, 54);font-size: 2vh;text-align: center;font-weight: bold;margin-top: 1vh;}
+.song_list>.swiper_window>.song_menu_list>li>div{background-size: cover;width: 20vh;height:16vh;transition: 0.3s;box-shadow: 0 0 0.25vh 0.25vh white;transition: 0.3s}
 .song_list>.left_scroll,.right_scroll{width:8%;height:100%;position: relative;}
+.song_list>.swiper_window>.song_menu_list>li:hover>div{box-shadow: 0 0 0.4vh 0.4vh #272627;}
 .song_list .icon{position: absolute;top:50%;left: 50%;transform: translate(-50%,-50%);
 width: 5vh;height: 5vh; fill: white;transition: 0.5s}
 .song_list>.left_scroll .icon:hover{width: 6vh;height: 6vh;fill:gray; cursor: pointer; }

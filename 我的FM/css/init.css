@@ -3,9 +3,10 @@ a{text-decoration: none;}
 ul,ol{list-style: none;}
 body{font: 14px/1.5 Arial;}
 section,.bg{position: absolute; top: 0px;left: 0px;}
-.home_page{z-index: 2;background-color: #0302026b;}
-.bg{height: 100%;width:100%;z-index: 1;background: url('http://cloud.hunger-valley.com/music/public_tuijian_spring.jpg-big')center center no-repeat;
-background-size: cover;filter: blur(4px);}
+.home_page{z-index: 2;background-color: #ede8e814;}
+.bg{height: 100%;width:100%;z-index: 1;
+background: url("../image/1.jpg")center center no-repeat;
+background-size: cover;}
 .child_page{z-index: 0;}
 html,body,section{height: 100%;width: 100%;}
 .clearfiex::after{

@@ -1,19 +1,19 @@
 !function (){
     var $view = $('footer')
 
-/*-------------------------------*/
+/*_______________________________________________________________________________________*/
 
     var model = {
         init: function(){
            $.ajax({
                 type: "GET",
-                url: "http://api.jirengu.com/fm/getChannels.php",
+                url: "https://jirenguapi.applinzi.com/fm/getChannels.php",
                 success:this.find_rander
             })
         }
     }
 
-/*--------------------------------------*/
+/*_______________________________________________________________________________________*/
 
     var contorller = {
         init : function ($view,model){
@@ -35,7 +35,7 @@
             var _this = this
             this.$ul.on('click','li',function(){
                 EventCenter.fire('music', this.id)//创建自定义事件，并给该事件对象添加属性
-                _this.$bg.css({background:`url(${$(this).attr('data')})`})
+                _this.$bg.css({'background-image':`url(${$(this).attr('data')})`})
                 _this.$label.text($(this).attr('name'))
 
             })
@@ -57,12 +57,14 @@
                     move+= (-(this.li_width*5))
                     scroll()
                 }
+                console.log(-move,this.$ul.width()-this.$box.width())
             }.bind(this))
 
             this.$btn.eq(0).on('click',function(){
                 if(-move<=0){
                     right_scroll = false
                 }else  if( right_scroll === true){
+                    left_scroll = true
                     move+= ((this.li_width*5))
                     scroll()
                 }
@@ -87,7 +89,8 @@
                         </li>`
                 })
             _this.$ul.html(html)
-            _this.$ul.css({width:`${_this.li_width*json.length+100}px`})
+            _this.$li = _this.$ul.find('li')
+            _this.$ul.css({width:`${_this.li_width*_this.$li.length+100}px`})
             _this.bindEvent_window()
         }       
 
