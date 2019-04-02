@@ -8,6 +8,7 @@
 .plear_left>.contor>.collect_song:hover>svg{fill: #d21738;cursor: pointer;}
 .plear_left>.contor>.pause_song:hover>svg{fill: #d21738;cursor: pointer;}
 .plear_left>.contor>.next_song:hover>svg{fill: #d21738;cursor: pointer;}
+.state{opacity: 0;font-size:2.3vh;margin-top:1vh;text-align: center;transition: 0.5s;font-weight: bold;background: #91595980;border-radius: 10px;}
 .plear_right{flex: 1;}
 .plear_right>.outer{margin-left:9vh;}
 .plear_right>.outer>.song_name{color: white;font-size: 6vh;margin-top:2vh;font-weight: bold;}
