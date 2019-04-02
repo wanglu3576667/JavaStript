@@ -9,16 +9,15 @@ var content = `/*
 *  我先来准备一些CSS样式
 */
 body{
-    font-size:15px;
     background:#ff9c00;
 }
 #code{
     padding-top:2%;
-    padding-left:10px;
-    width:600px;
+    padding-left:2vh;
+    width:45%;
     height:85%;
     margin-top:3%;
-    margin-left:40px;
+    margin-left:6vh;
     background:#382f2fab;
     overflow:hidden;
 }
@@ -29,7 +28,7 @@ body{
     }
 .token.comment{
     color:#bdc1c4;
-    font-size:16px;
+
     font-weight: bold;
 }
 .token.property{
@@ -60,7 +59,7 @@ body{
 .body{
     height:50vh;
     width:100vh;
-    margin-right:20px;
+    margin-right:3vh;
 }
 /*先加上打底色*/
 .outer2{
@@ -199,12 +198,11 @@ var content1 = `
 #code1{
     float:right;
     margin-top:3%;
-    margin-right:40px;
+    margin-right:6vh;
     height:85%;
-    width:600px;
-    min-width:415px;
+    width:45%;
     padding-top:2%;
-    padding-left:10px;
+    padding-left:2vh;
     /*我需要一张写字板*/
     background-color:#dde6e97a;
     /*给写字板加点阴影*/
@@ -217,7 +215,6 @@ var content1 = `
     animation :breathe 1s linear  infinite alternate;
     overflow:hidden;
 }
-
 `
 var content2 = `
 ### 自我介绍

@@ -3,6 +3,10 @@ box-sizing: border-box;}
 a{
     text-decoration: none;color:red;
 }
+
+
+
+
 @keyframes breathe {
     0%{ box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18),
         0 5px 15px 0 rgba(0, 0, 0, 0.15);}
@@ -25,7 +29,7 @@ body{height: 100vh;}
 #main{
     position: absolute;top:50%;
     left:50%;transform: translateX(-50%) translateY(-50%);
-    height:620px;width:1348px;
+    height:95%;width:100%;
     overflow: hidden;
 }
 .body{

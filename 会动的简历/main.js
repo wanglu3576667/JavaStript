@@ -38,7 +38,6 @@
                 timer(writePageSheet)
             }else{
                 setTimeout(()=>{writePageCss(n)},time)
-                console.log(n)
             }
         
     }
