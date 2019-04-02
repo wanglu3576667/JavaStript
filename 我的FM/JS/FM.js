@@ -105,7 +105,6 @@
                                                 <use xlink:href="#icon-zantingtingzhi"></use>
                                             </svg>`
                                             )
-                console.log(this)
             })
         },
         bindEvent_progress_star : function (){
@@ -124,7 +123,7 @@
                     this.$time.text(`${minute}:${second}`)
 
                     var geci = '0'+ this.$time.text()
-                    if (this.hash[geci]){
+                    if (geci in this.hash){
                         this.$lyricr.text(this.hash[geci])
                         this.$lyricr.text_annimation('jello')
                     }

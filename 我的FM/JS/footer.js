@@ -57,7 +57,6 @@
                     move+= (-(this.li_width*5))
                     scroll()
                 }
-                console.log(-move,this.$ul.width()-this.$box.width())
             }.bind(this))
 
             this.$btn.eq(0).on('click',function(){
@@ -80,7 +79,6 @@
         find_rander:function(json){
             var _this = contorller 
             _this.json = JSON.parse(json).channels
-            console.log(_this.json)
             var html = ''
             _this.json.forEach((element) => {
                 html+= `<li id = ${element.channel_id} data = ${element.cover_big} name=${element.name} >
