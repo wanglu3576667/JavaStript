@@ -15,7 +15,7 @@ export default new Router({
     },
     {
       name:'content',
-      path:'/content/:id&:username',//划重点，：加上变量  即可拿到父组件传递的数据,且可以传递给组件，原地刷新页面，组件也能通过path拿到数据
+      path:'/content/:id&:username',//划重点，：后面接变量  即可拿到routerlink传递的数据,且可以传递给组件，原地刷新页面，组件也能通过path拿到数据
       components:{main:content,sidebar}
     },
     {

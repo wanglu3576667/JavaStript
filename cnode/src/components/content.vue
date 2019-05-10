@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="content_component">
         <div v-if='post.length === 0' class="cricle">loading......</div>
         <div v-else>
             <div class="content_content">
@@ -34,13 +34,11 @@ export default {
     data(){
         return {
             post:[],
-           
         }
     },
     beforeMount(){
         this.$http.get(`https://cnodejs.org/api/v1/topic/${this.$route.params.id}`)//父组件通过路由给子组件传递参数
         .then((response)=>{this.post=response.data.data}).catch((error)=>{console.log(error)})
-        console.log(1)
     },
     filters:{
         filterTab(value){
@@ -73,8 +71,16 @@ export default {
             }else if(leadtime>(60*60*24*30*12)){
                   return parseInt(leadtime/(60*60*24*30*12),10)+'年前'
             }
-        },
-     }
+        }
+     },
+       watch:{
+        '$route'(to,from){
+            console.log('content')
+            this.$http.get(`https://cnodejs.org/api/v1/topic/${this.$route.params.id}`)//父组件通过路由给子组件传递参数
+            .then((response)=>{this.post=response.data.data;console.log(this.post)}).catch((error)=>{console.log(error)})
+            console.log('content')
+        }
+    }
 }
 </script>
 <style>

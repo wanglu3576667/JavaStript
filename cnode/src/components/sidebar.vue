@@ -3,7 +3,7 @@
     <div class="sidebar">
          <p class="writer">作者</p>
         <div class="message">
-            <img :src="post1.avatar_url" alt="" width="40px"><span class="name">{{post1.loginname}}</span>
+             <router-link :to="{name:'user',params:{username:post1.loginname}}"><img :src="post1.avatar_url" alt="" width="40px"></router-link><span class="name">{{post1.loginname}}</span>
             <p class="scroe">积分：{{post1.score}}</p>
         </div>
             <div class="header">最近创建的话题</div>
@@ -19,22 +19,12 @@
 export default {
   data(){
         return {
-            post:[],
             post1:[]
         }
     },
     beforeMount(){
         this.$http.get(`https://cnodejs.org/api/v1/user/${this.$route.params.username}`)
             .then((response)=>{this.post1=response.data.data; console.log(this.post,2)}).catch((e)=>{console.log(e)})
-       
-        this.$http.get(`https://cnodejs.org/api/v1/topic/${this.$route.params.id}`)//父组件通过路由给子组件传递参数
-            .then((response)=>{this.post=response.data.data},console.log(this.post,1)).catch((error)=>{console.log(error)})
-     
-    },
-    watch:{
-        '$route'(to,from){
-            window.location.reload() 
-        }
     }
 }
 </script>

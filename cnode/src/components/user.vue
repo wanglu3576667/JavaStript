@@ -84,6 +84,12 @@ export default {
                   return parseInt(leadtime/(60*60*24*30*12),10)+'年前'
             }
         },
+    },
+    watch:{
+        '$route'(to,from){
+             this.$http.get(`https://cnodejs.org/api/v1/user/${this.$route.params.username}`)
+        .then((response)=>{this.post=response.data.data; console.log(this.post)}).catch((e)=>{console.log(e)})
+        }
     }    
 }
 </script>
