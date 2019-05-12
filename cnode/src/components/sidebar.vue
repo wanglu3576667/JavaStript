@@ -24,7 +24,7 @@ export default {
     },
     beforeMount(){
         this.$http.get(`https://cnodejs.org/api/v1/user/${this.$route.params.username}`)
-            .then((response)=>{this.post1=response.data.data; console.log(this.post,2)}).catch((e)=>{console.log(e)})
+            .then((response)=>{this.post1=response.data.data;}).catch((e)=>{console.log(e)})
     }
 }
 </script>

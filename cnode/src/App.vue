@@ -9,18 +9,21 @@
         <router-view class="right" name="sidebar"></router-view>
      </div>
    </div>
+    <my-footer></my-footer>
   </div>
 </template>
 
 <script>
-import myHeader from './components/header'
+import myHeader from './components/header.vue'
 import postList from './components/postlist.vue'
+import myFooter from './components/footer.vue'
 export default {
-  components:{myHeader,postList}
+  components:{myHeader,postList,myFooter}
 }
 </script>
 
 <style>
+#app{max-width:1440px;margin:0px auto;}
 .main{width: 90%;margin: 15px auto;display: flex;}
 .postlist{width:100%;display: flex;justify-content: space-between}
 .postlist>.left{width:100%}

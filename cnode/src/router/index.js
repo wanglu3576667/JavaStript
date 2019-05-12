@@ -14,6 +14,11 @@ export default new Router({
      components:{main:postlist,} //划重点，加了s代表多个组件，是一个对象！拥有组件名称，不加s为单个组件，是一个键值对！组件名为default
     },
     {
+      name:'main1',
+     path:'/:tab',
+     components:{main:postlist,}
+    },
+    {
       name:'content',
       path:'/content/:id&:username',//划重点，：后面接变量  即可拿到routerlink传递的数据,且可以传递给组件，原地刷新页面，组件也能通过path拿到数据
       components:{main:content,sidebar}

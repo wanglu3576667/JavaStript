@@ -13,7 +13,7 @@
             <section class="user_newtopic">
                 <div class="header">最近创建的话题</div>
                 <ul>
-                    <li v-for="(value,index) in post.recent_topics" :key="value.id" v-if="index<5">
+                    <li v-for="value in topics" :key="value.id" >
                         <div>
                             <router-link :to="{name:'user',params:{username:value.author.loginname}}"><img :src="value.author.avatar_url" alt="" width="30px"></router-link>
                             <router-link class="title" :to="{name:'content',params:{id:value.id}}">{{value.title}}</router-link>
@@ -27,7 +27,7 @@
             <section class="user_abouttopic">
                 <div class="header">最近参与的话题</div>
                 <ul>
-                    <li v-for="(value,index) in post.recent_replies" :key="value.id" v-if="index<5">
+                    <li v-for="value in replies" :key="value.id" >
                         <div>
                             <router-link :to="{name:'user',params:{username:value.author.loginname}}"><img :src="value.author.avatar_url" alt="" width="30px"></router-link>
                             <router-link class="title" :to="{name:'content',params:{id:value.id}}">{{value.title}}</router-link>
@@ -85,10 +85,25 @@ export default {
             }
         },
     },
+    computed:{
+        replies(){
+            if(this.post.recent_replies.length>5){
+                 this.post.recent_replies.length = 5
+                 console.log( this.post.recent_replies.length)
+            }
+            return this.post.recent_replies
+        },
+        topics(){
+            if(this.post.recent_topics.length>5){
+                this.post.recent_topics.length = 5
+            }
+            return this.post.recent_topics
+        }
+    },
     watch:{
         '$route'(to,from){
              this.$http.get(`https://cnodejs.org/api/v1/user/${this.$route.params.username}`)
-        .then((response)=>{this.post=response.data.data; console.log(this.post)}).catch((e)=>{console.log(e)})
+            .then((response)=>{this.post=response.data.data;}).catch((e)=>{console.log(e)})
         }
     }    
 }

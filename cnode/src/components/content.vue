@@ -75,10 +75,8 @@ export default {
      },
        watch:{
         '$route'(to,from){
-            console.log('content')
             this.$http.get(`https://cnodejs.org/api/v1/topic/${this.$route.params.id}`)//父组件通过路由给子组件传递参数
-            .then((response)=>{this.post=response.data.data;console.log(this.post)}).catch((error)=>{console.log(error)})
-            console.log('content')
+            .then((response)=>{this.post=response.data.data;}).catch((error)=>{console.log(error)})
         }
     }
 }
