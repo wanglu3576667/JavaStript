@@ -3,3 +3,21 @@ ul,ol{list-style: none;}
 header{display: flex;justify-content: space-between;align-items: center;
 background:linear-gradient(135deg, #607D8B 0, #212121 100%);height: 50px; }
 header>h1{color: white;font-size: 24px;margin: 0 0 0 20px;}
+main{position: relative;}
+main>.mask-layer{position: absolute;top: 0px;width: 100vw;height: calc(100vh - 50px); background: rgba(0, 0, 0, 0.8);}
+main>.mask-layer>.menu>li{position: relative;cursor: pointer;}
+main>.mask-layer>.menu .english{font-size: 13px;}
+main>.mask-layer>.menu>li>.text{margin: 10px 0 10px 30px;padding: 10px;font-weight: 400;font-size: 18px;color: white;position: relative; transition: all 0.5s;}
+main>.mask-layer>.menu>li>.float{background-color: rgba(233, 30, 99, 0.8);position: absolute;top:-3px;height: 50px;width:0px;transition: all 0.5s;}
+main>.mask-layer>.menu>li:hover>.float{width:100vw;}  
+main>.mask-layer>.menu>li:hover>.text{color:#693535}
+main>.mask-layer>.contact{display: flex;align-items: center;justify-content: space-around;width: 173px;margin:271px 0px 0px 40px}
+main>.mask-layer>.contact li{border-radius: 50%;opacity: 0.5;display: flex;align-items: center;justify-content: center;}
+main>.mask-layer>.contact .email{width: 40px;height: 40px;background-color: rgb(0, 171, 108);}
+main>.mask-layer>.contact .zhihu{width: 40px;height: 40px;background-color: rgb(88, 70, 19);}
+main>.mask-layer>.contact .github{width: 40px;height: 40px;background-color: white}
+main>.mask-layer>.contact .jianshu{width: 40px;height: 40px;background-color: rgb(150, 14, 14)}
+main>.mask-layer>.annotation{opacity: 0.5; margin-left: 40px;margin-top:10px;color: white;font-size: 12px;}
+main>.mask-layer>.qq-email{position: absolute;top:300px;left:40px;; background-color: #de2525;;color: whitesmoke;text-align: center;
+width: 60%;padding: 30px;border-radius: 10px;opacity: 0;transition: 0.3}
+main>.mask-layer>.qq-email.active{opacity:1;}
